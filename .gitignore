@@ -1,0 +1,28 @@
+# secrets — NEVER commit
+.env
+.env.*
+!.env.example
+*.key
+*_id_ed25519
+keystore/
+wallets/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# runtime state / logs
+data/state/*.json
+data/state/*.log
+!data/state/.gitkeep
+*.log
+.DS_Store

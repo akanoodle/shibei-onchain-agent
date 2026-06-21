@@ -1,0 +1,36 @@
+{
+  "_comment": "On-chain tradeable universe for the OnChain universe filter. Mainnet (chainId 56) addresses are canonical, well-known token contracts. Testnet (chainId 97) token contracts vary by faucet/deployment — VERIFY against your faucet before any live testnet run, and override via SHIBEI_ONCHAIN_*_ADDRESS env vars if needed. min_liquidity_usd is a reference depth floor used by the universe filter; the execution-time final guard re-checks live pool depth/quote.",
+  "quote_asset": "USDT",
+  "networks": {
+    "56": {
+      "name": "bsc-mainnet",
+      "router": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+      "factory": "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73",
+      "wbnb": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "usdt": "0x55d398326f99059fF775485246999027B3197955",
+      "tokens": [
+        {"symbol": "BNBUSDT", "base_asset": "BNB", "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", "decimals": 18, "is_native": true, "min_liquidity_usd": 5000000, "tradeable": true, "notes": "native BNB; wrapped to WBNB for swaps"},
+        {"symbol": "ETHUSDT", "base_asset": "ETH", "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8", "decimals": 18, "min_liquidity_usd": 2000000, "tradeable": true, "notes": "Binance-Peg ETH"},
+        {"symbol": "BTCUSDT", "base_asset": "BTC", "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c", "decimals": 18, "min_liquidity_usd": 2000000, "tradeable": true, "notes": "BTCB (Binance-Peg BTC)"},
+        {"symbol": "CAKEUSDT", "base_asset": "CAKE", "address": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82", "decimals": 18, "min_liquidity_usd": 1000000, "tradeable": true, "notes": "PancakeSwap token, deepest native-DEX liquidity"},
+        {"symbol": "USDCUSDT", "base_asset": "USDC", "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d", "decimals": 18, "min_liquidity_usd": 1000000, "tradeable": true, "notes": "stable; mostly used for routing"},
+        {"symbol": "XRPUSDT", "base_asset": "XRP", "address": "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE", "decimals": 18, "min_liquidity_usd": 500000, "tradeable": true, "notes": "Binance-Peg XRP"},
+        {"symbol": "ADAUSDT", "base_asset": "ADA", "address": "0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47", "decimals": 18, "min_liquidity_usd": 500000, "tradeable": true, "notes": "Binance-Peg ADA"},
+        {"symbol": "DOGEUSDT", "base_asset": "DOGE", "address": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43", "decimals": 8, "min_liquidity_usd": 500000, "tradeable": true, "notes": "Binance-Peg DOGE; 8 decimals"}
+      ]
+    },
+    "97": {
+      "name": "bsc-testnet",
+      "router": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1",
+      "factory": "0x6725F303b657a9451d8BA641348b6761A6CC7a17",
+      "wbnb": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+      "usdt": "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd",
+      "tokens": [
+        {"symbol": "BNBUSDT", "base_asset": "BNB", "address": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd", "decimals": 18, "is_native": true, "min_liquidity_usd": 0, "tradeable": true, "notes": "WBNB testnet"},
+        {"symbol": "CAKEUSDT", "base_asset": "CAKE", "address": "0xFa60D973F7642B748046464e165A65B7323b0DEE", "decimals": 18, "min_liquidity_usd": 0, "tradeable": true, "notes": "CAKE testnet (verify per faucet)"},
+        {"symbol": "BTCUSDT", "base_asset": "BTC", "address": "0x6ce8dA28E2f864420840cF74474eFf5fD80E65B8", "decimals": 18, "min_liquidity_usd": 0, "tradeable": true, "notes": "test BTCB (verify per faucet)"},
+        {"symbol": "ETHUSDT", "base_asset": "ETH", "address": "0x8BaBbB98678facC7342735486C851ABD7A0d17Ca", "decimals": 18, "min_liquidity_usd": 0, "tradeable": true, "notes": "test ETH (verify per faucet)"}
+      ]
+    }
+  }
+}

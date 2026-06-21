@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shibei-onchain-agent"
+version = "0.1.0"
+description = "Shibei On-Chain Agent — autonomous BNB Chain trading agent (CMC Agent Hub signal + Trust Wallet Agent Kit execution + 拾贝 V3.0 risk brain)"
+requires-python = ">=3.9"
+readme = "README.md"
+dependencies = []
+
+# Core pipeline (signal -> decision -> dry-run execution -> reconcile) runs on
+# the stdlib alone, so tests and the DRY_RUN demo need nothing installed.
+# Live capabilities are opt-in extras:
+[project.optional-dependencies]
+onchain = [
+  "web3>=6.0",
+  "eth-account>=0.10",
+]
+http = [
+  "requests>=2.28",
+]
+dev = [
+  "pytest>=7.0",
+]
+
+[project.scripts]
+shibei-onchain = "shibei_onchain.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
