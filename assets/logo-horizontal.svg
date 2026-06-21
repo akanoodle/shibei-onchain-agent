@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 360" width="1180" height="360" role="img" aria-label="Shibei On-Chain Agent">
+  <defs>
+    <linearGradient id="gold2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8D873"/>
+      <stop offset="0.45" stop-color="#F3BA2F"/>
+      <stop offset="1" stop-color="#C5870F"/>
+    </linearGradient>
+    <radialGradient id="bg2" cx="0.5" cy="0.36" r="0.78">
+      <stop offset="0" stop-color="#1B2433"/>
+      <stop offset="1" stop-color="#0B0E11"/>
+    </radialGradient>
+  </defs>
+
+  <!-- self-contained dark banner so the wordmark reads on any background -->
+  <rect x="0" y="0" width="1180" height="360" rx="48" fill="url(#bg2)"/>
+  <rect x="1.5" y="1.5" width="1177" height="357" rx="46.5" fill="none" stroke="#F3BA2F" stroke-opacity="0.22" stroke-width="3"/>
+
+  <!-- icon -->
+  <g transform="translate(20,20) scale(0.625)">
+    <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg2)"/>
+    <rect x="17.5" y="17.5" width="477" height="477" rx="110.5" fill="none" stroke="#F3BA2F" stroke-opacity="0.30" stroke-width="3"/>
+    <path d="M256 400 L112 220 A228 228 0 0 1 400 220 Z" fill="url(#gold2)"/>
+    <g stroke="#0B0E11" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round">
+      <line x1="256" y1="400" x2="112" y2="220"/>
+      <line x1="256" y1="400" x2="180" y2="184"/>
+      <line x1="256" y1="400" x2="256" y2="172"/>
+      <line x1="256" y1="400" x2="332" y2="184"/>
+      <line x1="256" y1="400" x2="400" y2="220"/>
+    </g>
+    <circle cx="256" cy="400" r="30" fill="#0B0E11"/>
+    <circle cx="256" cy="400" r="17" fill="url(#gold2)"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="360" y="190" font-family="Inter, Helvetica, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="2" fill="#FFFFFF">SHIBEI</text>
+  <text x="362" y="252" font-family="Inter, Helvetica, Arial, sans-serif" font-size="40" font-weight="600" letter-spacing="13" fill="#F3BA2F">ON-CHAIN AGENT</text>
+</svg>

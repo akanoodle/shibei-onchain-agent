@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Shibei On-Chain Agent">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8D873"/>
+      <stop offset="0.45" stop-color="#F3BA2F"/>
+      <stop offset="1" stop-color="#C5870F"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.36" r="0.78">
+      <stop offset="0" stop-color="#1B2433"/>
+      <stop offset="1" stop-color="#0B0E11"/>
+    </radialGradient>
+  </defs>
+
+  <!-- badge -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg)"/>
+  <rect x="17.5" y="17.5" width="477" height="477" rx="110.5" fill="none" stroke="#F3BA2F" stroke-opacity="0.30" stroke-width="3"/>
+
+  <!-- scallop shell fan = an upward fan of candles (拾贝 + trading growth) -->
+  <g>
+    <path d="M256 400 L112 220 A228 228 0 0 1 400 220 Z" fill="url(#gold)"/>
+    <!-- shell grooves / candle separators -->
+    <g stroke="#0B0E11" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round">
+      <line x1="256" y1="400" x2="112" y2="220"/>
+      <line x1="256" y1="400" x2="180" y2="184"/>
+      <line x1="256" y1="400" x2="256" y2="172"/>
+      <line x1="256" y1="400" x2="332" y2="184"/>
+      <line x1="256" y1="400" x2="400" y2="220"/>
+    </g>
+    <!-- self-custody / agent node at the pivot -->
+    <circle cx="256" cy="400" r="30" fill="#0B0E11"/>
+    <circle cx="256" cy="400" r="17" fill="url(#gold)"/>
+  </g>
+</svg>
